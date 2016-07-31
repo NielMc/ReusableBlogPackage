@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 #-published_date means descending order
 def blog_posts(request):
     posts= Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, "blogposts.html", {'posts':posts})
+    return render(request, "blog/blogposts.html", {'posts':posts})
 def post_detail(request, id):
     """
     Create a view that returns a single post object based on the post ID and then render it to the 'postdetail.html'
