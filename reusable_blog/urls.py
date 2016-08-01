@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^/$', views.blog_posts, name='post_list'),
     url(r'^(?P<id>\d+)/$', views.post_detail),
     url(r'^post/$', views.new_post, name='new_post'),
+    url(r'^blog/(?P<id>\d+)/edit$', views.edit_post, name="edit"),
+    url(r'^popular/$', views.blog_posts_by_views, name="popular"),
 ]

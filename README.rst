@@ -11,7 +11,7 @@ git+https://github.com/NielMc/ReusableBlogPackage
 
 Quick start -----------
 1. Add "reusable_blog" to your INSTALLED_APPS setting like this::
-    INSTALLED_APPS = (         ...         'reusable_blog',   )
+    INSTALLED_APPS = (         ...         'reusable_blog', 'disqus'  )
 
 
 2. Run `python manage.py makemigrations and migrate`.
