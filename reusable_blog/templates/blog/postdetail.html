@@ -22,7 +22,9 @@
                     </figure>
                         <p>{{ post.content | linebreaks }}</p>
                         <p><button class="btn btn-default" onclick="location.href='{% url 'post_list'%}'">Back to Blog</button>
+                            {% if user.id == post.author_id %}
                         <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button></p>
+                            {% endif %}
                         <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</p>
                         <p>
                             {% load disqus_tags %}
